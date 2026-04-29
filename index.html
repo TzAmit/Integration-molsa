@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>קליטת עובד חדש</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- Hero -->
+  <header class="hero">
+    <div class="hero-badge"><i class="fa-solid fa-rocket"></i> קליטת עובד חדש</div>
+    <h1>ברוכים הבאים לצוות!</h1>
+    <p>רשימת המשימות המלאה שלך לקליטה — עקוב אחרי כל שלב כדי להתחיל לעבוד בצורה מלאה.</p>
+  </header>
+
+  <main class="container">
+
+    <!-- Progress -->
+    <div class="progress-bar" aria-label="התקדמות קליטה">
+      <span>התקדמות</span>
+      <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+      <span class="progress-pct" id="progressPct">0 %</span>
+    </div>
+
+    <!-- Table of Contents -->
+    <nav class="toc" aria-label="תוכן עניינים">
+      <div class="toc-header">
+        <i class="fa-solid fa-list"></i>
+        <span>תוכן עניינים</span>
+      </div>
+      <div class="toc-grid">
+        <a href="#sec-org" class="toc-item"><i class="fa-solid fa-sitemap"></i> היכרות עם הארגון והאגף</a>
+        <a href="#sec-admin" class="toc-item"><i class="fa-solid fa-clipboard-check"></i> הגדרות מנהליות</a>
+        <a href="#sec-tools" class="toc-item"><i class="fa-solid fa-screwdriver-wrench"></i> התקנות וכלים</a>
+        <a href="#sec-cloud" class="toc-item"><i class="fa-solid fa-cloud"></i> ענן וקישוריות</a>
+        <a href="#sec-attendance" class="toc-item"><i class="fa-solid fa-clock"></i> דיווחים ונוכחות</a>
+        <a href="#sec-communication" class="toc-item"><i class="fa-solid fa-comments"></i> תקשורת פנימית</a>
+        <a href="#sec-meetings" class="toc-item"><i class="fa-solid fa-users-rectangle"></i> ישיבות</a>
+        <a href="#sec-learning" class="toc-item"><i class="fa-solid fa-graduation-cap"></i> למידה והתפתחות</a>
+        <a href="#sec-architecture" class="toc-item"><i class="fa-solid fa-layer-group"></i> ארכיטקטורה וסטנדרטים</a>
+        <a href="#sec-data" class="toc-item"><i class="fa-solid fa-database"></i> עבודה עם נתונים</a>
+        <a href="#sec-docs" class="toc-item"><i class="fa-solid fa-book"></i> תיעוד ומסמכים</a>
+        <a href="#sec-bestpractices" class="toc-item"><i class="fa-solid fa-lightbulb"></i> Best Practices לפיתוח</a>
+        <a href="#sec-sdlc" class="toc-item"><i class="fa-solid fa-code-branch"></i> תהליכי פיתוח (SDLC)</a>
+        <a href="#sec-permissions" class="toc-item"><i class="fa-solid fa-key"></i> הרשאות</a>
+        <a href="#sec-culture" class="toc-item"><i class="fa-solid fa-building-user"></i> תרבות ארגונית</a>
+        <a href="#sec-workplace" class="toc-item"><i class="fa-solid fa-map-location-dot"></i> מדריך סביבת עבודה</a>
+        <a href="#sec-support" class="toc-item"><i class="fa-solid fa-headset"></i> תמיכה טכנית</a>
+      </div>
+    </nav>
+
+    <!-- ═══ היכרות עם הארגון והאגף ═══ -->
+    <div class="section-title" id="sec-org"><i class="fa-solid fa-sitemap"></i> היכרות עם הארגון והאגף</div>
+    <div class="card-grid">
+
+      <div class="card card-wide">
+        <div class="card-icon blue"><i class="fa-solid fa-building"></i></div>
+        <h3>מבנה אגף מערכות מידע</h3>
+        <div class="org-clusters" style="margin-bottom: .75rem;">
+          <div class="org-cluster" style="grid-column: 1 / -1; border-right-color: var(--primary-light); background: #eef2ff;">
+            <i class="fa-solid fa-user-gear" style="color: var(--primary-light);"></i>
+            <div>
+              <strong>מנמ״רית — שושי בן אהרון</strong>
+              <span>מנהלת אגף מערכות מידע. אחראית על כלל הפעילות הטכנולוגית בארגון.</span>
+            </div>
+          </div>
+        </div>
+        <p style="font-size:.85rem; color:var(--text-muted); margin-bottom:.25rem;">האגף מחולק לשלושה אשכולות מרכזיים:</p>
+        <div class="org-clusters">
+          <div class="org-cluster">
+            <i class="fa-solid fa-credit-card"></i>
+            <div>
+              <strong>תחום תשלומים</strong>
+              <span>שולמית יעקובוביץ</span>
+            </div>
+          </div>
+          <div class="org-cluster">
+            <i class="fa-solid fa-gears"></i>
+            <div>
+              <strong>תחום מערכות ייעודיות</strong>
+              <span>ימימה כהן</span>
+            </div>
+          </div>
+          <div class="org-cluster">
+            <i class="fa-solid fa-chart-pie"></i>
+            <div>
+              <strong>תחום BI</strong>
+              <span>יניב שפיצר</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ═══ הגדרות מנהליות ═══ -->
+    <div class="section-title" id="sec-admin"><i class="fa-solid fa-clipboard-check"></i> הגדרות מנהליות</div>
+    <div class="card-grid">
+
+      <div class="card" data-task>
+        <div class="card-check" role="checkbox" aria-checked="false" tabindex="0"><i class="fa-solid fa-check"></i></div>
+        <div class="card-icon green"><i class="fa-solid fa-desktop"></i></div>
+        <h3>קבלת מחשב, ציוד ועמדת עבודה</h3>
+        <p>יש לוודא קבלת מחשב תקין, מסכים, עכבר, מקלדת ועמדת עבודה מסודרת. במידה וחסר ציוד — יש לפנות לאדמיניסטרציה או ל-IT.</p>
+      </div>
+
+      <div class="card" data-task>
+        <div class="card-check" role="checkbox" aria-checked="false" tabindex="0"><i class="fa-solid fa-check"></i></div>
+        <div class="card-icon blue"><i class="fa-solid fa-user-shield"></i></div>
+        <h3>הרשאות מנהל</h3>
+        <p>יש לפתוח קריאה ב-<strong>SysAid</strong> לבקשת חשבון מנהל לניהול הגדרות מקומיות.</p>
+        <a class="action-link" href="http://sysaidhd/servicePortal" target="_blank" rel="noopener noreferrer">
+          <i class="fa-solid fa-external-link-alt"></i> פתיחת קריאה ב-SysAid
+        </a>
+      </div>
+
+      <div class="card" data-task>
+        <div class="card-check" role="checkbox" aria-checked="false" tabindex="0"><i class="fa-solid fa-check"></i></div>
+        <div class="card-icon violet"><i class="fa-solid fa-code"></i></div>
+        <h3>גישת מפתח</h3>
+        <p>יש לבקש הרשאות מפתח להתקנות מקומיות וגישה לריפוזיטורי.</p>
+        <a class="action-link" href="http://sysaidhd/servicePortal" target="_blank" rel="noopener noreferrer">
+          <i class="fa-solid fa-external-link-alt"></i> פתיחת קריאה ב-SysAid
+        </a>
+      </div>
+
+      <div class="card" data-task>
+        <div class="card-check" role="checkbox" aria-checked="false" tabindex="0"><i class="fa-solid fa-check"></i></div>
+        <div class="card-icon teal"><i class="fa-solid fa-calendar-check"></i></div>
+        <h3>דיווח נוכחות</h3>
+        <p>יש להקים חשבון <strong>GovIDP (מרכבה)</strong>. יש לפתוח קריאת תמיכה ליצירת משתמש חדש.</p>
+        <a class="action-link" href="http://sysaidhd/servicePortal" target="_blank" rel="noopener noreferrer">
+          <i class="fa-solid fa-external-link-alt"></i> פתיחת קריאה ב-SysAid
+        </a>
+      </div>
+
+    </div>
+
+    <!-- ═══ התקנות וכלים ═══ -->
+    <div class="section-title" id="sec-tools"><i class="fa-solid fa-screwdriver-wrench"></i> התקנות וכלים</div>
+
+    <div class="path-box">
+      <i class="fa-solid fa-folder-open"></i>
+      <code id="installPath">\\alms22\Programs</code>
+      <button class="copy-btn" id="copyBtn" aria-label="העתקת נתיב ההתקנה ללוח">
+        <i class="fa-regular fa-copy"></i> העתק נתיב
+      </button>
+    </div>
+
+    <div class="card-grid">
+
+      <div class="card" data-task>
+        <div class="card-check" role="checkbox" aria-checked="false" tabindex="0"><i class="fa-solid fa-check"></i></div>
+        <div class="card-icon sky"><i class="fa-solid fa-laptop-code"></i></div>
+        <h3>VS Code</h3>
+        <p>עורך קוד קליל — יש להתקין מהנתיב המשותף ברשת.</p>
+        <div class="card-path">
+          <code>\\alms22\Programs\Visual Studios +SSDT\Visual Studio Code</code>
+          <button class="copy-path-btn" data-path="\\alms22\Programs\Visual Studios +SSDT\Visual Studio Code" aria-label="העתק נתיב">
+            <i class="fa-regular fa-copy"></i> העתק נתיב
+          </button>
+        </div>
+      </div>
+
+      <div class="card" data-task>
+        <div class="card-check" role="checkbox" aria-checked="false" tabindex="0"><i class="fa-solid fa-check"></i></div>
+        <div class="card-icon blue"><i class="fa-solid fa-window-restore"></i></div>
+        <h3>Visual Studio</h3>
+        <p>יש להתקין גרסאות בהתאם לצורך הפרויקט.</p>
+        <div class="card-path">
+          <code>\\alms22\Programs\Visual Studios +SSDT</code>
+          <button class="copy-path-btn" data-path="\\alms22\Programs\Visual Studios +SSDT" aria-label="העתק נתיב">
+            <i class="fa-regular fa-copy"></i> העתק נתיב
+          </button>
+        </div>
+      </div>
+
+      <div class="card" data-task>
+        <div class="card-check" role="checkbox" aria-checked="false" tabindex="0"><i class="fa-solid fa-check"></i></div>
+        <div class="card-icon green"><i class="fa-brands fa-node-js"></i></div>
+        <h3>NodeJS + תוספים</h3>
+        <p>יש להתקין NodeJS כולל התוספים הנדרשים לפיתוח צד לקוח וצד שרת.</p>
+        <div class="card-path">
+          <code>\\alms22\Programs\ADD INS\NODE JS X64</code>
+          <button class="copy-path-btn" data-path="\\alms22\Programs\ADD INS\NODE JS X64" aria-label="העתק נתיב">
+            <i class="fa-regular fa-copy"></i> העתק נתיב
+          </button>
+        </div>
+      </div>
+
+      <div class="card" data-task>
+        <div class="card-check" role="checkbox" aria-checked="false" tabindex="0"><i class="fa-solid fa-check"></i></div>
+        <div class="card-icon amber"><i class="fa-solid fa-paper-plane"></i></div>
+        <h3>Postman</h3>
+        <p>פלטפורמה לבדיקת ופיתוח API — כלי חיוני לעבודה עם שירותי REST.</p>
+        <div class="card-path">
+          <code>\\alms22\Programs\Postman</code>
+          <button class="copy-path-btn" data-path="\\alms22\Programs\Postman" aria-label="העתק נתיב">
+            <i class="fa-regular fa-copy"></i> העתק נתיב
+          </button>
+        </div>
+      </div>
+
+      <div class="card" data-task>
+        <div class="card-check" role="checkbox" aria-checked="false" tabindex="0"><i class="fa-solid fa-check"></i></div>
+        <div class="card-icon rose"><i class="fa-solid fa-database"></i></div>
+        <h3>SSMS (לקוח SQL)</h3>
+        <p>SQL Server Management Studio לשאילתות וניהול בסיסי נתונים.</p>
+        <div class="card-path">
+          <code>\\alms22\Programs\SQL CLIENT</code>
+          <button class="copy-path-btn" data-path="\\alms22\Programs\SQL CLIENT" aria-label="העתק נתיב">
+            <i class="fa-regular fa-copy"></i> העתק נתיב
+          </button>
+        </div>
+      </div>
+
+      <div class="card" data-task>
+        <div class="card-check" role="checkbox" aria-checked="false" tabindex="0"><i class="fa-solid fa-check"></i></div>
+        <div class="card-icon violet"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+        <h3>Kiro</h3>
+        <p>כלי פיתוח פנימי — יש ליצור קשר עם <strong>מיכל</strong> לקבלת פרטי משתמש והוראות הגדרה.</p>
+        <div class="card-path">
+          <code>\\alms22\Programs\Kiro</code>
+          <button class="copy-path-btn" data-path="\\alms22\Programs\Kiro" aria-label="העתק נתיב">
+            <i class="fa-regular fa-copy"></i> העתק נתיב
+          </button>
+        </div>
+      </div>
+
+      <div class="card" data-task>
+        <div class="card-check" role="checkbox" aria-checked="false" tabindex="0"><i class="fa-solid fa-check"></i></div>
+        <div class="card-icon teal"><i class="fa-solid fa-cubes"></i></div>
+        <h3>DotNET</h3>
+        <p>סביבת הריצה והפיתוח של .NET — נדרשת עבור פרויקטים בצד שרת.</p>
+        <div class="card-path">
+          <code>\\alms22\Programs\DotNET</code>
+          <button class="copy-path-btn" data-path="\\alms22\Programs\DotNET" aria-label="העתק נתיב">
+            <i class="fa-regular fa-copy"></i> העתק נתיב
+          </button>
+        </div>
+      </div>
+
+      <div class="card" data-task>
+        <div class="card-check" role="checkbox" aria-checked="false" tabindex="0"><i class="fa-solid fa-check"></i></div>
+        <div class="card-icon amber"><i class="fa-brands fa-git-alt"></i></div>
+        <h3>Git</h3>
+        <p>מערכת ניהול גרסאות — נדרשת לעבודה עם ריפוזיטורי ושיתוף קוד.</p>
+        <div class="card-path">
+          <code>\\alms22\Programs</code>
+          <button class="copy-path-btn" data-path="\\alms22\Programs" aria-label="העתק נתיב">
+            <i class="fa-regular fa-copy"></i> העתק נתיב
+          </button>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ═══ ענן וקישוריות ═══ -->
+    <div class="section-title" id="sec-cloud"><i class="fa-solid fa-cloud"></i> ענן וקישוריות</div>
+    <div class="card-grid">
+
+      <div class="card" data-task>
+        <div class="card-check" role="checkbox" aria-checked="false" tabindex="0"><i class="fa-solid fa-check"></i></div>
+        <div class="card-icon sky"><i class="fa-solid fa-cloud-arrow-up"></i></div>
+        <h3>גישה לענן</h3>
+        <p>יש להתחבר לפרויקטי הענן הרלוונטיים לצוות שלך. יש לוודא גישה לכל הסביבות הנדרשות.</p>
+      </div>
+
+      <div class="card" data-task>
+        <div class="card-check" role="checkbox" aria-checked="false" tabindex="0"><i class="fa-solid fa-check"></i></div>
+        <div class="card-icon blue"><i class="fa-brands fa-microsoft"></i></div>
+        <h3>חשבון Microsoft</h3>
+        <p>יש לתאם עם <strong>אביאל אהרון</strong> להפעלת חשבון Microsoft והקצאת רישיון.</p>
+      </div>
+
+      <div class="card" data-task>
+        <div class="card-check" role="checkbox" aria-checked="false" tabindex="0"><i class="fa-solid fa-check"></i></div>
+        <div class="card-icon green"><i class="fa-solid fa-key"></i></div>
+        <h3>הרשאות מפתח</h3>
+        <p>יש לוודא שניתנה גישה ל-<strong>Teams</strong>, <strong>Visual Studio</strong> ו-<strong>SSMS</strong> עם הרשאות מפתח מתאימות.</p>
+      </div>
+
+    </div>
+
+    <!-- ═══ דיווחים ונוכחות ═══ -->
+    <div class="section-title" id="sec-attendance"><i class="fa-solid fa-clock"></i> דיווחים ונוכחות</div>
+    <div class="card-grid">
+
+      <div class="card">
+        <div class="card-icon blue"><i class="fa-solid fa-id-card"></i></div>
+        <h3>דיווח שעות — מרכבה</h3>
+        <p>דיווח נוכחות חודשי במערכת מרכבה. שימו לב — הכניסה מתבצעת באמצעות <strong>כרטיס חכם</strong> בלבד.</p>
+        <a class="action-link" href="https://ofan.merkava.gov.il/Merkava" target="_blank" rel="noopener noreferrer">
+          <i class="fa-solid fa-external-link-alt"></i> כניסה למרכבה
+        </a>
+      </div>
+
+      <div class="card">
+        <div class="card-icon violet"><i class="fa-solid fa-calendar-week"></i></div>
+        <h3>דיווח מיקום נוכחות</h3>
+        <p>בכל יום חמישי יש לדווח את תכנית הנוכחות לשבוע הבא — אילו ימים מהבית ואילו מהמשרד.</p>
+        <a class="action-link" href="http://workplacereporting/#/pages/attendance" target="_blank" rel="noopener noreferrer">
+          <i class="fa-solid fa-external-link-alt"></i> כניסה למערכת דיווח
+        </a>
+      </div>
+
+      <div class="card card-wide">
+        <div class="card-icon teal"><i class="fa-solid fa-building-user"></i></div>
+        <h3>מדיניות נוכחות — חשוב לדעת</h3>
+        <div class="policy-list">
+          <div class="policy-item">
+            <i class="fa-solid fa-home"></i>
+            <span>אפשר לעבוד עד <strong>יומיים בשבוע</strong> מהבית, אבל לא יומיים רצופים (ראשון + חמישי נחשבים רצופים).</span>
+          </div>
+          <div class="policy-item">
+            <i class="fa-solid fa-users"></i>
+            <span>לכל צוות יש יום חובה במשרד: צוותי <strong>שולמית — יום שני</strong>, צוותי <strong>ימימה — יום רביעי</strong>.</span>
+          </div>
+          <div class="policy-item">
+            <i class="fa-solid fa-calendar-check"></i>
+            <span>כל חמישי מדווחים את התכנית לשבוע הבא במערכת דיווח המיקום.</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-icon sky"><i class="fa-solid fa-business-time"></i></div>
+        <h3>שעות עבודה</h3>
+        <div class="policy-list">
+          <div class="policy-item">
+            <i class="fa-solid fa-clock"></i>
+            <span>היקף משרה: <strong>9 שעות ביום</strong>. שעות מקובלות: <strong>07:30–16:30</strong>.</span>
+          </div>
+          <div class="policy-item">
+            <i class="fa-solid fa-arrows-left-right"></i>
+            <span>קיימת גמישות בשעות הגעה/יציאה בתיאום עם הצוות. שינוי מהותי מחייב אישור.</span>
+          </div>
+          <div class="policy-item">
+            <i class="fa-solid fa-bell"></i>
+            <span><strong>שעות ליבה</strong> — שעות בהן נדרשת זמינות מלאה לישיבות ועבודה משותפת. מוגדרות ברמת הצוות.</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-icon amber"><i class="fa-solid fa-person-walking-arrow-right"></i></div>
+        <h3>הגעה למשרד ואיחורים</h3>
+        <div class="policy-list">
+          <div class="policy-item">
+            <i class="fa-solid fa-building"></i>
+            <span>לכל צוות יש <strong>ימי חובה</strong> במשרד — יש לבדוק מול ראש הצוות.</span>
+          </div>
+          <div class="policy-item">
+            <i class="fa-solid fa-clock"></i>
+            <span>החל מהשעה <strong>09:30</strong> — יש להודיע לראש הצוות על איחור.</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-icon rose"><i class="fa-solid fa-calendar-xmark"></i></div>
+        <h3>חופשות והיעדרויות</h3>
+        <div class="policy-list">
+          <div class="policy-item">
+            <i class="fa-solid fa-calendar-days"></i>
+            <span>יש לעדכן את ראש הצוות <strong>לפחות שבוע מראש</strong>.</span>
+          </div>
+          <div class="policy-item">
+            <i class="fa-solid fa-bed"></i>
+            <span><strong>מחלה</strong> — יש לעדכן את ראש הצוות בהקדם.</span>
+          </div>
+          <div class="policy-item">
+            <i class="fa-solid fa-check-double"></i>
+            <span>כל היעדרות מחייבת עדכון במערכת הנוכחות של הפרויקט.</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ═══ תקשורת פנימית ═══ -->
+    <div class="section-title" id="sec-communication"><i class="fa-solid fa-comments"></i> תקשורת פנימית</div>
+    <div class="card-grid">
+
+      <div class="card">
+        <div class="card-icon blue"><i class="fa-brands fa-microsoft"></i></div>
+        <h3>Microsoft Teams</h3>
+        <p>כלי התקשורת המרכזי בארגון. משמש לצ'אטים, שיחות, שיתוף קבצים וישיבות. יש להתקין ולהגדיר מיד עם תחילת העבודה.</p>
+      </div>
+
+      <div class="card">
+        <div class="card-icon teal"><i class="fa-solid fa-envelope"></i></div>
+        <h3>מייל</h3>
+        <p>משמש לתקשורת רשמית, תיעוד החלטות ושיתוף מסמכים. יש להקפיד על נושא ברור ותוכן תמציתי.</p>
+      </div>
+
+      <div class="card">
+        <div class="card-icon amber"><i class="fa-solid fa-hourglass-half"></i></div>
+        <h3>זמני תגובה</h3>
+        <p>יש להשיב להודעות Teams תוך זמן סביר במהלך שעות הליבה. מיילים — תוך יום עבודה. פניות דחופות — טלפון.</p>
+      </div>
+
+    </div>
+
+    <!-- ═══ ישיבות ═══ -->
+    <div class="section-title" id="sec-meetings"><i class="fa-solid fa-users-rectangle"></i> ישיבות</div>
+    <div class="card-grid">
+
+      <div class="card card-wide">
+        <div class="card-icon violet"><i class="fa-solid fa-video"></i></div>
+        <h3>ישיבות צוות — כללים</h3>
+        <div class="policy-list">
+          <div class="policy-item">
+            <i class="fa-solid fa-calendar-day"></i>
+            <span>ישיבות <strong>Daily / Weekly</strong> — חובה להשתתף בכל ישיבות הצוות.</span>
+          </div>
+          <div class="policy-item">
+            <i class="fa-solid fa-camera"></i>
+            <span>בישיבות מקוונות — <strong>חובה לפתוח מצלמה</strong>.</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ═══ למידה והתפתחות ═══ -->
+    <div class="section-title" id="sec-learning"><i class="fa-solid fa-graduation-cap"></i> למידה והתפתחות</div>
+    <div class="card-grid">
+
+      <div class="card">
+        <div class="card-icon rose"><i class="fa-solid fa-certificate"></i></div>
+        <h3>קורסים והכשרות חובה</h3>
+        <div class="policy-list">
+          <div class="policy-item">
+            <i class="fa-solid fa-shield-halved"></i>
+            <span>קורסי <strong>אבטחת מידע ונהלים</strong> — שנתיים, לפי דרישות הארגון.</span>
+          </div>
+          <div class="policy-item">
+            <i class="fa-solid fa-landmark"></i>
+            <span>קורס <strong>חשכ״ל</strong> — חובה אחת לשנה.</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-icon green"><i class="fa-solid fa-chalkboard-user"></i></div>
+        <h3>ימי העשרה</h3>
+        <p>ימי העשרה ארגוניים מתקיימים מעת לעת — <strong>השתתפות חובה</strong>. כוללים עדכונים מקצועיים, סדנאות וכלים חדשים.</p>
+      </div>
+
+      <div class="card">
+        <div class="card-icon sky"><i class="fa-solid fa-rocket"></i></div>
+        <h3>פיתוח מקצועי אישי</h3>
+        <p>מעודדים השתתפות בקורסים מקצועיים, כנסים ווובינרים. שיתוף ידע מהלמידה עם הצוות הוא חלק בלתי נפרד מהתרבות.</p>
+      </div>
+
+    </div>
+
+    <!-- ═══ ארכיטקטורה וסטנדרטים ═══ -->
+    <div class="section-title" id="sec-architecture"><i class="fa-solid fa-layer-group"></i> ארכיטקטורה וסטנדרטים</div>
+    <div class="card-grid">
+
+      <div class="card">
+        <div class="card-icon sky"><i class="fa-solid fa-cubes"></i></div>
+        <h3>ארכיטקטורת מערכות</h3>
+        <p>עובדים עם שילוב של <strong>Microservices</strong> ו-<strong>Monolith</strong>, בהתאם למערכת. ממשקים נבנים כ-<strong>REST APIs</strong> או <strong>WCF</strong> בהתאם לצורך.</p>
+      </div>
+
+      <div class="card">
+        <div class="card-icon amber"><i class="fa-brands fa-aws"></i></div>
+        <h3>תשתיות</h3>
+        <p>חלק מהמערכות רצות על <strong>AWS</strong> וחלק <strong>On-Prem</strong> (IIS, SQL Server). חשוב להכיר את שתי הסביבות ואת ההבדלים ביניהן.</p>
+      </div>
+
+      <div class="card">
+        <div class="card-icon rose"><i class="fa-solid fa-sliders"></i></div>
+        <h3>ניהול קונפיגורציה</h3>
+        <p>הגדרות המערכות מנוהלות בצורה מרכזית. שינויי קונפיגורציה עוברים תהליך מסודר ומתועדים בכל סביבה בנפרד.</p>
+      </div>
+
+      <div class="card card-wide">
+        <div class="card-icon green"><i class="fa-solid fa-server"></i></div>
+        <h3>הפרדת סביבות</h3>
+        <p>קיימת הפרדה מוחלטת בין הסביבות. כל סביבה משרתת שלב אחר בתהליך:</p>
+        <div class="env-list">
+          <div class="env-item">
+            <span class="env-badge dev">DEV</span>
+            <span>סביבת פיתוח — הרשאות מלאות למפתחים. כאן כותבים ובודקים קוד חדש.</span>
+          </div>
+          <div class="env-item">
+            <span class="env-badge test">TEST</span>
+            <span>סביבת בדיקות — הרשאות מלאות לצוות QA, צפייה בלבד למפתחים.</span>
+          </div>
+          <div class="env-item">
+            <span class="env-badge staging">PRE-PROD</span>
+            <span>שלב אחרון לפני ייצור. משמשת גם לבדיקת באגים מייצור.</span>
+          </div>
+          <div class="env-item">
+            <span class="env-badge prod">PROD</span>
+            <span>סביבת ייצור — גישה מוגבלת. שינויים רק דרך תהליך העלאה מסודר.</span>
+          </div>
+        </div>
+      </div>
+
+      
+
+    </div>
+
+    <!-- ═══ עבודה עם נתונים ═══ -->
+    <div class="section-title" id="sec-data"><i class="fa-solid fa-database"></i> עבודה עם נתונים</div>
+    <div class="card-grid">
+
+      <div class="card">
+        <div class="card-icon rose"><i class="fa-solid fa-server"></i></div>
+        <h3>SQL Server — כללי עבודה</h3>
+        <p>כל העבודה מול בסיסי הנתונים מתבצעת לפי מסמך הקונבנציות. עיקרי הכללים:</p>
+        <div class="policy-list">
+          <div class="policy-item">
+            <i class="fa-solid fa-layer-group"></i>
+            <span>הפרדה באמצעות <strong>סכמות</strong> (app, code, sec, cfg, rpt, audit) — לא משתמשים ב-dbo במערכות חדשות.</span>
+          </div>
+          <div class="policy-item">
+            <i class="fa-solid fa-font"></i>
+            <span>שמות טבלאות ועמודות ב-<strong>PascalCase</strong>. Primary Key תמיד <code>&lt;TableName&gt;Id</code>.</span>
+          </div>
+          <div class="policy-item">
+            <i class="fa-solid fa-ban"></i>
+            <span>אין שימוש ב-<strong>Identity</strong> — רק SEQUENCE. אין קיצורים (Num/Descr) — מילים מלאות בלבד.</span>
+          </div>
+          <div class="policy-item">
+            <i class="fa-solid fa-link"></i>
+            <span>חובה להגדיר <strong>Foreign Keys</strong> בכל הטבלאות.</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-icon violet"><i class="fa-solid fa-file-signature"></i></div>
+        <h3>קונבנציות ושמות</h3>
+        <p>קיימים מסמכי סטנדרט לשמות — חובה לקרוא לפני כתיבת קוד או הקמת רכיבים בענן:</p>
+        <div class="doc-links">
+          <a class="doc-link-btn" href="./docs/SQL-conventions.docx" target="_blank" rel="noopener noreferrer">
+            <i class="fa-solid fa-database"></i>
+            <div class="doc-link-text">
+              <strong>קונבנציות SQL Server</strong>
+              <span>כללי שמות לטבלאות, סכמות, אילוצים, SP ו-Functions</span>
+            </div>
+            <i class="fa-solid fa-download"></i>
+          </a>
+          <a class="doc-link-btn" href="./docs/AWS-naming-standards.docx" target="_blank" rel="noopener noreferrer">
+            <i class="fa-brands fa-aws"></i>
+            <div class="doc-link-text">
+              <strong>סביבה מאוחדת בענן AWS — סטנדרט שמות</strong>
+              <span>תבניות שמות לכל רכיבי הענן (S3, Lambda, ECS, IAM ועוד)</span>
+            </div>
+            <i class="fa-solid fa-download"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="card card-wide">
+        <div class="card-icon amber"><i class="fa-solid fa-ticket"></i></div>
+        <h3>נוהל פתיחת קריאה לצוות DBA</h3>
+        <p>בקשות לצוות DBA יש להעביר באמצעות פתיחת קריאה מסודרת במערכת הקריאות. יש לשנות את התבנית ל-<strong>DBA</strong> בתחתית העמוד. בקריאה יש לציין:</p>
+        <div class="policy-list">
+          <div class="policy-item">
+            <i class="fa-solid fa-file-lines"></i>
+            <span><strong>מהות הבקשה</strong> — מה בדיוק נדרש לבצע.</span>
+          </div>
+          <div class="policy-item">
+            <i class="fa-solid fa-server"></i>
+            <span><strong>סביבה</strong> — Production / Test / Dev / UAT וכדומה.</span>
+          </div>
+          <div class="policy-item">
+            <i class="fa-solid fa-hard-drive"></i>
+            <span><strong>שם השרת</strong> ו<strong>שם בסיס הנתונים</strong> הרלוונטיים.</span>
+          </div>
+          <div class="policy-item">
+            <i class="fa-solid fa-circle-info"></i>
+            <span><strong>סיבת הבקשה</strong> ו<strong>שיוך צוותי</strong>.</span>
+          </div>
+          <div class="policy-item">
+            <i class="fa-solid fa-user-check"></i>
+            <span><strong>גורם מאשר</strong> — נדרש בפעולות רגישות: מתן הרשאות, שינוי נתונים, שינוי מבנה, או פעולה בסביבת ייצור.</span>
+          </div>
+        </div>
+        <p style="font-size:.85rem; color:var(--text-muted); margin-top:.5rem;"><i class="fa-solid fa-key" style="color:var(--accent); margin-left:.35rem;"></i> <strong>בקשת הרשאות?</strong> יש לציין בנוסף: הלוגין המבוקש, סוג ההרשאה, הסביבה, שם בסיס הנתונים, והאובייקט שעליו נדרשת ההרשאה (במידת הצורך).</p>
+        <a class="action-link" href="http://sysaidhd/servicePortal" target="_blank" rel="noopener noreferrer">
+          <i class="fa-solid fa-external-link-alt"></i> פתיחת קריאה ב-SysAid
+        </a>
+      </div>
+
+    </div>
+
+    <!-- ═══ תיעוד ומסמכים ═══ -->
+    <div class="section-title" id="sec-docs"><i class="fa-solid fa-book"></i> תיעוד ומסמכים</div>
+    <div class="card-grid">
+
+      <div class="card">
+        <div class="card-icon blue"><i class="fa-solid fa-folder-tree"></i></div>
+        <h3>איפה נשמרים מסמכים</h3>
+        <p>כל מסמכי הפרויקט נשמרים במיקום מרכזי משותף. יש לוודא שמירה במיקום הנכון לפי סוג המסמך ושם הפרויקט.</p>
+      </div>
+
+      <div class="card">
+        <div class="card-icon teal"><i class="fa-solid fa-file-pen"></i></div>
+        <h3>כתיבת מסמך מערכת</h3>
+        <p>כל מערכת חדשה מחייבת מסמך מערכת מסודר הכולל ארכיטקטורה, תהליכים עסקיים, ממשקים ותלויות. יש לעקוב אחרי התבנית הארגונית.</p>
+      </div>
+
+      <div class="card">
+        <div class="card-icon violet"><i class="fa-solid fa-copy"></i></div>
+        <h3>תבניות ודוגמאות</h3>
+        <p>קיימות תבניות מוכנות למסמכי אפיון, מסמכי מערכת ותיעוד טכני. התבניות מצורפות למייל הקליטה — יש להשתמש בהן ככלי עבודה קבוע.</p>
+      </div>
+
+    </div>
+
+    <!-- ═══ Best Practices לפיתוח ═══ -->
+    <div class="section-title" id="sec-bestpractices"><i class="fa-solid fa-lightbulb"></i> Best Practices לפיתוח</div>
+    <div class="card-grid">
+
+      <div class="card">
+        <div class="card-icon sky"><i class="fa-solid fa-glasses"></i></div>
+        <h3>קוד קריא</h3>
+        <p>קוד צריך להיות ברור גם למפתח שלא כתב אותו — שמות משתנים משמעותיים, מבנה לוגי מסודר, ללא קיצורים לא ברורים. קוד קריא מקל על תחזוקה ושיתוף ידע.</p>
+      </div>
+
+      <div class="card">
+        <div class="card-icon rose"><i class="fa-solid fa-triangle-exclamation"></i></div>
+        <h3>טיפול בשגיאות</h3>
+        <p>יש לטפל בשגיאות בצורה מבוקרת — הודעות ברורות למשתמשים ולוגים מפורטים למפתחים. טיפול נכון משפר יציבות ומאפשר איתור תקלות מהיר.</p>
+      </div>
+
+      <div class="card">
+        <div class="card-icon amber"><i class="fa-solid fa-gauge-high"></i></div>
+        <h3>ביצועים</h3>
+        <p>קוד יעיל שמנצל נכון CPU, זיכרון וגישה ל-DB. יש להימנע מקריאות מיותרות ולבצע אופטימיזציה בנקודות קריטיות. ביצועים טובים משפיעים על חוויית המשתמש ועלויות.</p>
+      </div>
+
+      <div class="card">
+        <div class="card-icon green"><i class="fa-solid fa-repeat"></i></div>
+        <h3>Idempotency</h3>
+        <p>פעולה אידמפוטנטית מחזירה את אותה תוצאה גם אם מבוצעת מספר פעמים. חשוב במיוחד בתהליכים מבוזרים או כשיש retry — מונע כפילויות ובעיות.</p>
+      </div>
+
+      <div class="card">
+        <div class="card-icon blue"><i class="fa-solid fa-rotate"></i></div>
+        <h3>Retry נכון</h3>
+        <p>מנגנון retry עבור כשלונות זמניים (קריאות רשת וכו'). חשוב לשלב <strong>backoff</strong> הדרגתי ולהגביל ניסיונות. retry לא נכון עלול לגרום לעומס או כפילויות.</p>
+      </div>
+
+    </div>
+
+    <!-- ═══ תהליכי פיתוח (SDLC) ═══ -->
+    <div class="section-title" id="sec-sdlc"><i class="fa-solid fa-code-branch"></i> תהליכי פיתוח (SDLC)</div>
+    <div class="card-grid">
+
+      <div class="card">
+        <div class="card-icon blue"><i class="fa-solid fa-diagram-project"></i></div>
+        <h3>שלבי הפיתוח</h3>
+        <p>התהליך מתחיל מ<strong>אפיון דרישות</strong>, עובר ל<strong>פיתוח</strong>, <strong>בדיקות</strong> ולבסוף <strong>העלאה לייצור</strong>. בכל שלב יש גורם אחראי ותוצרים נדרשים. אין קפיצות — מעבר בין שלבים רק עם אישור.</p>
+      </div>
+
+      <div class="card">
+        <div class="card-icon teal"><i class="fa-brands fa-microsoft"></i></div>
+        <h3>ניהול משימות — Azure DevOps</h3>
+        <p>כל משימה מנוהלת ב-<strong>DevOps</strong> עם תיאור, קריטריוני קבלה והקצאה. חשוב לעדכן סטטוס באופן שוטף ולדווח על חסמים. זה מקור האמת לניהול העבודה.</p>
+      </div>
+
+      <div class="card">
+        <div class="card-icon green"><i class="fa-solid fa-code-branch"></i></div>
+        <h3>Branching Strategy</h3>
+        <p>כל פיתוח מתבצע ב-<strong>feature branch</strong> נפרד כדי למנוע התנגשויות. מיזוג ל-develop/main מתבצע רק אחרי בדיקות ואישור. שומרים על ענף ראשי יציב תמיד.</p>
+      </div>
+
+      <div class="card">
+        <div class="card-icon violet"><i class="fa-solid fa-magnifying-glass-chart"></i></div>
+        <h3>Code Review</h3>
+        <p>כל קוד חייב לעבור <strong>בדיקה של מפתח נוסף</strong> לפני מיזוג. הבדיקה כוללת איכות קוד, עמידה בסטנדרטים וזיהוי בעיות. זה גם כלי מעולה לשיתוף ידע בצוות.</p>
+      </div>
+
+      <div class="card">
+        <div class="card-icon amber"><i class="fa-solid fa-flag-checkered"></i></div>
+        <h3>Definition of Done</h3>
+        <p>משימה נחשבת "גמורה" רק כשכל הקריטריונים מתקיימים — <strong>פיתוח</strong>, <strong>בדיקות</strong>, <strong>תיעוד</strong> ו<strong>אישור</strong>. ההגדרה מבטיחה אחידות ואיכות בכל המשימות.</p>
+      </div>
+
+    </div>
+
+    <!-- ═══ הרשאות ═══ -->
+    <div class="section-title" id="sec-permissions"><i class="fa-solid fa-key"></i> הרשאות</div>
+    <div class="card-grid">
+
+      <div class="card card-wide">
+        <div class="card-icon violet"><i class="fa-solid fa-user-lock"></i></div>
+        <h3>למי פונים לקבלת הרשאות</h3>
+        <p>בהתאם לסוג ההרשאה, יש לפנות לגורם המתאים:</p>
+        <div class="policy-list">
+          <div class="policy-item">
+            <i class="fa-solid fa-database"></i>
+            <span><strong>בסיסי נתונים (DB)</strong> — שרון עופר</span>
+          </div>
+          <div class="policy-item">
+            <i class="fa-brands fa-git-alt"></i>
+            <span><strong>TFS / Git</strong> — אולג קודינסקי</span>
+          </div>
+          <div class="policy-item">
+            <i class="fa-brands fa-aws"></i>
+            <span><strong>סביבת AWS</strong> — אביאל אהרון</span>
+          </div>
+          <div class="policy-item">
+            <i class="fa-solid fa-cloud"></i>
+            <span><strong>ענן (כללי)</strong> — צוות DevOps</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ═══ תרבות ארגונית ═══ -->
+    <div class="section-title" id="sec-culture"><i class="fa-solid fa-building-user"></i> תרבות ארגונית</div>
+    <div class="card-grid">
+
+      <div class="card">
+        <div class="card-icon blue"><i class="fa-solid fa-bullseye"></i></div>
+        <h3>ציפיות ממפתח</h3>
+        <p>מצופה לקחת אחריות מלאה על המשימות, לעמוד בלוחות זמנים ולהציף חסמים בזמן. עבודה לפי סטנדרטים ארגוניים, הקפדה על איכות קוד ותיעוד, יוזמה ולמידה מתמדת.</p>
+      </div>
+
+      <div class="card">
+        <div class="card-icon teal"><i class="fa-solid fa-people-group"></i></div>
+        <h3>עבודה בצוות</h3>
+        <p>שיתוף פעולה עם מפתחים, מנהלי פרויקטים וצוותים משיקים. תקשורת פתוחה, עדכון סטטוסים וסיוע לחברי צוות. הצלחת הצוות קודמת להצלחה אישית.</p>
+      </div>
+
+      <div class="card">
+        <div class="card-icon amber"><i class="fa-solid fa-share-nodes"></i></div>
+        <h3>שיתוף ידע</h3>
+        <p>שיתוף ידע שוטף באמצעות Code Review, תיעוד וישיבות צוות. הנגשת פתרונות ותובנות מניסיון אישי — תורם לשיפור מקצועי ולהפחתת תלות באדם יחיד.</p>
+      </div>
+
+    </div>
+
+    <!-- ═══ מדריך סביבת עבודה ═══ -->
+    <div class="section-title" id="sec-workplace"><i class="fa-solid fa-map-location-dot"></i> מדריך סביבת עבודה</div>
+    <div class="card-grid">
+
+      <div class="card">
+        <div class="card-icon sky"><i class="fa-solid fa-wifi"></i></div>
+        <h3>רשת WiFi</h3>
+        <div class="info-block">
+          <div class="info-row"><span class="info-label">שם רשת:</span> <span class="info-value">Molsa_Wifi</span></div>
+          <div class="info-row"><span class="info-label">סיסמה:</span> <span class="info-value">1700503090</span></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-icon amber"><i class="fa-solid fa-print"></i></div>
+        <h3>מדפסות</h3>
+        <p>המדפסת המשותפת נמצאת ליד חדר הישיבות בקומה. יש להתקין דרייבר מהרשת או לפנות ל-IT לחיבור.</p>
+      </div>
+
+      <div class="card">
+        <div class="card-icon green"><i class="fa-solid fa-mug-hot"></i></div>
+        <h3>מטבח ואזור מנוחה</h3>
+        <p>המטבח נמצא בקצה המסדרון. יש מקרר, מיקרוגל ותנור קטן. נא לשמור על ניקיון ולפנות כלים בסוף היום.</p>
+      </div>
+
+      <div class="card">
+        <div class="card-icon violet"><i class="fa-solid fa-door-open"></i></div>
+        <h3>חדרי ישיבות</h3>
+        <p>הזמנת חדרי ישיבות מתבצעת דרך Outlook. יש לוודא שהחדר פנוי לפני הזמנה ולשחרר אם לא בשימוש.</p>
+      </div>
+
+      <div class="card">
+        <div class="card-icon blue"><i class="fa-solid fa-square-parking"></i></div>
+        <h3>חניה</h3>
+        <p>החניון נמצא בקומת הכניסה. יש לפנות לאדמיניסטרציה לקבלת תג חניה ומספר מקום קבוע.</p>
+      </div>
+
+      <div class="card">
+        <div class="card-icon rose"><i class="fa-solid fa-clock"></i></div>
+        <h3>שעות פעילות</h3>
+        <p>שעות העבודה הן בין 07:00–18:00. הכניסה למבנה מחוץ לשעות אלו מחייבת תיאום מראש עם אבטחה.</p>
+      </div>
+
+    </div>
+
+  </main>
+
+  <!-- ═══ תמיכה טכנית ═══ -->
+  <section class="container" style="margin-top: 0;">
+    <div class="section-title" id="sec-support"><i class="fa-solid fa-headset"></i> תמיכה טכנית</div>
+    <div class="card-grid">
+
+      <div class="card contact-card">
+        <div class="card-icon violet"><i class="fa-solid fa-headset"></i></div>
+        <h3>תמיכת IT — מוקד שירות</h3>
+        <div class="contact-details">
+          <div class="contact-row"><i class="fa-solid fa-user"></i> <span>מוקד תמיכה</span></div>
+          <div class="contact-row"><i class="fa-solid fa-phone"></i> <span>1700-50-30-90</span></div>
+          <div class="contact-row"><i class="fa-solid fa-headset"></i> <a href="http://sysaidhd/servicePortal" target="_blank" rel="noopener noreferrer" style="color: var(--primary-light); text-decoration: none; font-weight: 600;">פתיחת קריאה ב-SysAid</a></div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2026 קליטת עובדים — IT &middot; צריכים עזרה? פנו לראש הצוות שלכם.</p>
+  </footer>
+
+  <!-- Back to Top -->
+  <button class="back-to-top" id="backToTop" aria-label="חזרה לראש הדף">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
